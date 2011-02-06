@@ -1,0 +1,7 @@
+library('plyr')
+library('ggplot2')
+dat <- read.csv('data/canabaltdetailedscores.csv',stringsAsFactors=FALSE)
+names(dat)<-c('score','death','device')
+grpd<-ddply(dat,"death",function(df)c(length(df$score),round(mean(df$score)),round(sd(df$score)),median(df$score),max(df$score),min(df$score),max(df$score)-min(df$score)))
+names(grpd) <- c('death','count','mean','stddev','median','max','min','range')
+qplot(grpd$mean,grpd$death)
