@@ -10,9 +10,11 @@ names(bydeathtype) <- c('death','count','mean','stddev','median','max','min','ra
 
 bydevice<-ddply(canabalt,"device",function(df)c(length(df$score),round(mean(df$score)),round(sd(df$score)),median(df$score),max(df$score),min(df$score),max(df$score)-min(df$score)))
 names(bydevice) <- c('device','count','mean','stddev','median','max','min','range')
+# sort it by count, descending order
+bydevice[order(bydevice$count,decreasing=TRUE),]
 
 p <- ggplot(canabalt,aes(factor(death),score))
-p + geom_boxplot()+coord_flip() + facet_wrap(~ device, ncol=1) + opts(title="Canabalt Scores by method of death by device type")
+p + geom_boxplot()+coord_flip() + facet_wrap(~ device, ncol=1) + opts(title="Canabalt Scores by method of death faceted by device type")
 
 
 canabalt_regexp = re.compile(r'I ran (\d{3,7})m before (.*) on my ([^.]+)\.')
