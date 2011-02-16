@@ -26,3 +26,7 @@ Do the best players tend to die by a certain method?
 1       iPad   284 4723   3884 4041.5 40630 104 40526
 2     iPhone   735 4491   3882 3419.0 36332 102 36230
 3 iPod touch   189 3734   3644 2713.0 28024 102 27922
+
+> summary(canabalt$score)
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    102    2110    3402    4427    5488   40630 
