@@ -1,1 +1,28 @@
-analysis of canabalt scores. more details to come. 
+analysis of canabalt scores. I'm constantly collecting data posted to twitter and will update the repository as appropriate.
+
+I'm trying to determine a few things:
+
+Does the device that canabalt is being played on influence the score? I.e. do iPad players score higher than iPod Touch players?
+
+Do the best players tend to die by a certain method?
+
+                                            death count mean stddev median   max  min range
+1           colliding with some enormous obstacle    40 4768   4247 3256.5 16933  433 16500
+2          completely  missing the entire hallway     1 1046     NA 1046.0  1046 1046     0
+3                             falling to my death    37 4176   3160 3619.0 13573  567 13006
+4         hitting a wall and tumbling to my death   684 4155   3481 3319.5 36332  102 36230
+5  just barely stumbling out of the first hallway    13  104      1  104.0   104  102     2
+6                        knocking a building down    21 3399   2267 2849.0  8374  336  8038
+7             landing where a building used to be    17 4804   4970 3631.0 22685 1170 21515
+8                      missing a crane completely    22 2950   1774 2923.5  7883  381  7502
+9                          missing another window   243 5898   4981 4486.0 40630  409 40221
+10                 not quite reaching a billboard    19 3098   1244 2980.0  5772  444  5328
+11     riding a falling building all the way down     4 4278   2162 4195.5  6993 1727  5266
+12        somehow hitting the edge of a billboard    14 5991   3827 5518.5 13547  566 12981
+13            somehow hitting the edge of a crane     7 5497   4835 4942.0 13275  510 12765
+14                       turning into a fine mist    86 3592   2698 2662.5 16441  614 15827
+
+      device count mean stddev median   max min range
+1       iPad   284 4723   3884 4041.5 40630 104 40526
+2     iPhone   735 4491   3882 3419.0 36332 102 36230
+3 iPod touch   189 3734   3644 2713.0 28024 102 27922
